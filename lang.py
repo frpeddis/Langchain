@@ -7,7 +7,8 @@ import os
 import tempfile
 
 # Set up OpenAI API
-openai.apikey = st.secrets["API_KEY"]
+openai.api_key = st.secrets["API_KEY"]
+apikey=api_key 
 #os.environ["OPENAI_API_KEY"] = apikey
 llm = OpenAI(temperature=0)
 
