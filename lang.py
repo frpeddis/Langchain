@@ -2,14 +2,14 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain.document_loaders import PyPDFLoader
 from langchain import OpenAI
 import streamlit as st
-from apikey import apikey
+#from apikey import apikey
 import os
 import tempfile
 
 # Set up OpenAI API
-#openai.api_key = st.secrets["API_KEY"]
-#apikey = api_key 
-os.environ["OPENAI_API_KEY"] = apikey
+OpenAI.api_key = st.secrets["API_KEY"]
+apikey = api_key 
+#os.environ["OPENAI_API_KEY"] = apikey
 llm = OpenAI(temperature=0)
 
 def summarize_pdfs_from_folder(pdfs_folder):
